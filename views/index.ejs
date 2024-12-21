@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pokédex</title>
+</head>
+<body>
+    <div class="pokedexlayout">
+    </div>
+    <div class="container">
+    <div class="text-center"><h1>Pokédex</h1></div>
+    <ul>
+        <% pokemons.forEach(function(pokemon) { %>
+            <li>
+                <a href="/pokemon/<%= pokemon.id %>"><%= pokemon.nome %></a> - <%= pokemon.tipo %>
+            </li>
+        <% }); %>
+    </ul>
+    <div class="text-center"><a href="/adicionarPokemon"><button>Adicionar Pokémon</button></a></div>
+    <br>
+    <div class="text-center"><a href="/professores"><button>Ver Lista de Professores</button></a></div>
+
+<div class="grid-container">
+    <div class="item"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" alt="Charmander"></div>
+    <div class="item"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Bulbasaur"></div>
+        <div class="item"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu"></div>
+            <div class="item"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" alt="Squirtle"></div>
+</div>
+<footer>
+    <p>© 2024 Pokédex</p>
+</footer>
+</div>
+</body>
+</html>

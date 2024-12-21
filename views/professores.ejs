@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Professores</title>
+</head>
+<body>
+    <div class="pokedexlayout">
+    </div>
+    <div class="container">
+    <div class="text-center"><h1>Professores</h1></div>
+        <ul>
+            <% professores.forEach(function(professor) { %>
+                <li>
+                    <a href="/professor/<%= professor.id %>"><%= professor.nome %></a>
+                </li>
+            <% }); %>
+        </ul>
+        <div class="text-center"><button><a href="/">Voltar à Pokédex</button></a></div>
+    </div>
+</body>
+</html>
